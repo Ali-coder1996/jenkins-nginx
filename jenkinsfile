@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                git branch: 'main', credentialsId: 'githup-perivate-key', url: 'git@github.com:Ali-coder1996/jenkins-nginx.git'
+                sh '.script.sh'
             }
         }
         stage('Test') { 

@@ -1,0 +1,9 @@
+version: '3'
+services:
+    nginx:
+      container_name: n-j
+      image: nginx/jenkins
+      build:
+        context: .
+      ports: 
+        - "8000:80"
