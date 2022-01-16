@@ -1,0 +1,20 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                git branch: 'main', credentialsId: 'githup-perivate-key', url: 'git@github.com:Ali-coder1996/jenkins-nginx.git'
+            }
+        }
+        stage('Test') { 
+            steps {
+                sh 'echo "testing"'
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                sh 'echo "Deploying" '
+            }
+        }
+    }
+}
